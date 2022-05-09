@@ -62,7 +62,7 @@ const btnTransfer = document.getElementById("btnTransfer");
 
 btnTransfer.addEventListener("click", () => {
   Wanjiru.transfer(10, Juma);
-  newBalacnce();
+  newBalance();
 });
 
 const select = document.getElementById("ddlTransfer");
@@ -74,6 +74,6 @@ select.addEventListener("change", () => {
   console.log("line 76:", value);
 });
 
-function newBalacnce() {
+function newBalance() {
   acctBalanceLbl.innerText += `after:  Wanjiru: ${Wanjiru.balance}, Juma: ${Juma.balance}, Linda: ${Linda.balance}\n`;
 }
