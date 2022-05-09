@@ -1,14 +1,4 @@
 import "./style.css";
-
-const acctBalanceLbl = document.getElementById("acctBalanceLbl");
-// const deposits = [];
-// const withdrawals = [];
-// let totalBalance = 25;
-const userDeposit = document.getElementById("userDeposit");
-const btnDeposit = document.getElementById("btnDeposit");
-const userWithdraw = document.getElementById("userWithdraw");
-const btnWithdraw = document.getElementById("btnWithdraw");
-
 function Account(name, balance) {
   this.name = name;
   this.balance = balance;
@@ -62,44 +52,28 @@ Account.prototype._isAllowed = function (amount) {
   return true;
 };
 
-// const amount = document.getElementById("userDeposit").value;
-// const select = document.getElementById("ddlDeposit");
-// const option = select.options[select.selectedIndex];
-// const name = option.text;
+const Wanjiru = new Account("Wanjiru", 100);
+const Juma = new Account("Juma", 333);
+const Linda = new Account("Linda", 3333);
 
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("name:", name, ", amount:", amount);
-  console.log("Option:", name);
+acctBalanceLbl.innerText += `before:  Wanjiru: ${Wanjiru.balance}, Juma: ${Juma.balance}, Linda: ${Linda.balance}\n`;
+const btnDeposit = document.getElementById("btnDeposit");
+const btnTransfer = document.getElementById("btnTransfer");
 
-  const newAcc = new Account(name, amount);
-  acctBalanceLbl.innerText += `${newAcc.name}: ${newAcc.balance}\n`;
+btnTransfer.addEventListener("click", () => {
+  Wanjiru.transfer(10, Juma);
+  newBalacnce();
 });
-// const userName = new Account(name, amount);
-// const Juma = new Account("Juma", 0);
-// const Linda = new Account("Linda", 111);
 
-//   acctBalanceLbl.innerText += `before:  Wanjiru: ${Wanjiru.balance}, Juma: ${Juma.balance}\n`;
-const depositBtn = document.getElementById("btnDeposit");
-depositBtn.addEventListener("click", () => {
-  const amount = document.getElementById("userDeposit").value;
-  const select = document.getElementById("ddlDeposit");
-  const option = select.options[select.selectedIndex];
-  const name = option.text;
-  const newAcc = new Account(name, amount);
-  Object.keys(newAcc).forEach(key => {
-    //  console.log('array', newAcc[key])
-    window.localStorage.setItem("Accounts", JSON.stringify(newAcc[key]));
-  });
+const select = document.getElementById("ddlTransfer");
+const value = select[select.selectedIndex].value; // get selected option value
+const text = select.options[select.selectedIndex].text;
+select.addEventListener("change", () => {
+  Wanjiru.transfer(10, Juma);
+  newBalacnce();
+  console.log("line 76:", value);
 });
-// change to ${customerA}.transfer(${amount}, ${customerB})
-// Wanjiru.transfer(30, Linda);
 
-// acctBalanceLbl.innerText += `Wanjiru: ${Wanjiru.balance}, Juma: ${Juma.balance}, Linda: ${Linda.balance}\n`;
-// const userWithdraw = document.getElementById("userWithdraw");
-// btnWithdraw.addEventListener("click", () => {
-
-// });
-
-// btnTransfer.addEventListener("click", () => {
-
-// });
+function newBalacnce() {
+  acctBalanceLbl.innerText += `after:  Wanjiru: ${Wanjiru.balance}, Juma: ${Juma.balance}, Linda: ${Linda.balance}\n`;
+}
