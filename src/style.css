@@ -41,7 +41,7 @@ h1 {
 
 input,
 button {
-  font-size: .85em;
+  font-size: .55em;
   padding: .65em 1em;
   border-radius: .3em;
   outline: 0;
@@ -63,6 +63,15 @@ label {
     font-size: 2em;
 }
 
-#btnDeposit, #btnWithdraw {
+#btnDeposit, #btnWithdraw, #btnTransfer{
     width: 8em;
+}
+
+.flex-column {
+  display: flex;
+  flex: column;
+}
+
+label {
+  font-size: 15px;
 }
