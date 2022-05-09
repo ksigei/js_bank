@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js_bank</title>
 </head>
+
 <body>
- 
+
     <div class="flex">
-    <div class="element-center">
-      
-      <div id="acctBalance">
-          
-              <span class="wrap"></span>
-          </a>
-          <h1>
-              Total Balance
-          </h1>
-          <label id="acctBalanceLbl"></label>
-      </div>
-  
-      <div id="inputs">
-          <h2>
-              Deposit
-          </h2>
-          <input type="text" id="userDeposit" required>
-          <button id="btnDeposit">Deposit</button>
-  
-          <h2>
-              Withdraw
-          </h2>
-          <input type="text" id="userWithdraw" required>
-          <button id="btnWithdraw">Withdraw</button>
-      </div>
+        <div class="element-center">
+            <!-- Wanjiru, Juma, and Linda. -->
+            <div id="inputs">
+                <div id="deposit">
+                    <h2>
+                        Deposit
+                    </h2>
+                    <label for="user-select">Choose user:</label>
+                    <select id="ddlDeposit" name="ddlDeposit">
+                        <option value="Wanjiru">Wanjiru</option>
+                        <option value="Juma">Juma</option>
+                        <option value="Linda">Linda</option>
+                    </select> <br>
+                    <input type="text" id="userDeposit" required>
+                    <button type="submit" value="Submit" id="btnDeposit">Deposit</button>
+                </div>
+
+                <div id="withdraw">
+                    <h2>
+                        Withdraw
+                    </h2>
+                    <label for="user-select">Choose user:</label>
+                    <select id="ddl">
+                        <option value="1">Wanjiru</option>
+                        <option value="2">Juma</option>
+                        <option value="3">Linda</option>
+                    </select> <br>
+                    <input type="text" id="userWithdraw" required>
+                    <button type="submit" value="Submit" id="btnWithdraw">Withdraw</button>
+                </div>
+
+                <div id="transfer">
+                    <h2>
+                        Transfer
+                    </h2>
+                    <label for="user-select">Choose users:</label>
+                    <select id="ddlTransfer">
+                        <option value="1">Wanjiru</option>
+                        <option value="2">Juma</option>
+                        <option value="3">Linda</option>
+                    </select>
+                    <select id="ddlTransfer">
+                        <option value="1">Wanjiru</option>
+                        <option value="2">Juma</option>
+                        <option value="3">Linda</option>
+                    </select> <br>
+                    <input type="text" id="userTransfer" required>
+                    <button type="submit" value="Submit" id="btnTransfer">Transfer</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="acctBalance">
+
+            <span class="wrap"></span>
+            </a>
+            <h2>
+                Total Balance
+            </h2>
+            <div class="flex-column">
+                <!-- <select id="ddlBalance">
+                    <option value="1">Wanjiru</option>
+                    <option value="2">Juma</option>
+                    <option value="3">Linda</option>
+                </select> -->
+                <!-- <button type="submit" value="Submit" id="btnBalance">See balance</button> -->
+                <!-- <input type="text" id="text"> -->
+                <label id="acctBalanceLbl"></label>
+            </div>
+        </div>
     </div>
-    </div>
-  
-      <script type="text/javascript" src="bank_account_script.js"></script>
-      <script type="text/javascript" src="typewriter_script.js"></script>
-  </body>
+    <script type="modules" src="./index.js"></script>
+</body>
+
 </html>
