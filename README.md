@@ -40,3 +40,8 @@ npm start
 8. Add the currencies so that it can be clears
 9. Allow adding of other users through the input form in the UI
 10. Use auth(eg sign up with password), to make it safe
+
+balances
+Account Name: Wanjiru, Balance: 599.5
+Account Name: Juma, Balance: 4670.51
+Account Name: Linda, Balance: 1292
