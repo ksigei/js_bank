@@ -17,47 +17,51 @@
                     <h2>
                         Deposit
                     </h2>
-                    <label for="user-select">Choose user:</label>
-                    <select id="ddlDeposit" name="ddlDeposit">
+                    <label for="userDepositName">Choose Account:</label> <br>
+                    <select id="userDepositName" name="ddlDeposit">
                         <option value="Wanjiru">Wanjiru</option>
                         <option value="Juma">Juma</option>
                         <option value="Linda">Linda</option>
                     </select> <br>
-                    <input type="text" id="userDeposit" required>
+                    <input type="number" id="userDeposit" placeholder="Amount" required>
                     <button type="submit" value="Submit" id="btnDeposit">Deposit</button>
+                    <div class="msgDeposit"></div>
                 </div>
 
                 <div id="withdraw">
                     <h2>
                         Withdraw
                     </h2>
-                    <label for="user-select">Choose user:</label>
-                    <select id="ddl">
-                        <option value="1">Wanjiru</option>
-                        <option value="2">Juma</option>
-                        <option value="3">Linda</option>
+                    <label for="userWithdraw">Choose Account:</label>
+                    <select id="userWithdraw">
+                        <option value="Wanjiru">Wanjiru</option>
+                        <option value="Juma">Juma</option>
+                        <option value="Linda">Linda</option>
                     </select> <br>
-                    <input type="text" id="userWithdraw" required>
+                    <input type="text" id="amountWithdrawed" placeholder="Amount" required>
                     <button type="submit" value="Submit" id="btnWithdraw">Withdraw</button>
+                    <div class="msgWithdraw"></div>
                 </div>
 
                 <div id="transfer">
                     <h2>
                         Transfer
                     </h2>
-                    <label for="user-select">Choose users:</label>
-                    <select id="ddlTransfer">
-                        <option value="1">Wanjiru</option>
-                        <option value="2">Juma</option>
-                        <option value="3">Linda</option>
+                    <label for="transferFrom">From:</label>
+                    <select id="transferFrom">
+                        <option value="Wanjiru">Wanjiru</option>
+                        <option value="Juma">Juma</option>
+                        <option value="Linda">Linda</option>
                     </select>
-                    <select id="ddlTransfer">
-                        <option value="1">Wanjiru</option>
-                        <option value="2">Juma</option>
-                        <option value="3">Linda</option>
+                    <label for="transferTo">To:</label>
+                    <select id="transferTo">
+                        <option value="Wanjiru">Wanjiru</option>
+                        <option value="Juma">Juma</option>
+                        <option value="Linda">Linda</option>
                     </select> <br>
-                    <input type="text" id="userTransfer" required>
+                    <input type="number" id="amountTransfer" placeholder="Amount" required>
                     <button type="submit" value="Submit" id="btnTransfer">Transfer</button>
+                    <div class="msgTransfer"></div>
                 </div>
             </div>
 
@@ -70,14 +74,9 @@
                 Total Balance
             </h2>
             <div class="flex-column">
-                <!-- <select id="ddlBalance">
-                    <option value="1">Wanjiru</option>
-                    <option value="2">Juma</option>
-                    <option value="3">Linda</option>
-                </select> -->
-                <!-- <button type="submit" value="Submit" id="btnBalance">See balance</button> -->
-                <!-- <input type="text" id="text"> -->
-                <label id="acctBalanceLbl"></label>
+                <div class="balances">
+                    
+                </div>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@ const amountTransfer = document.querySelector("#amountTransfer");
 const balanceDiv = document.querySelector(".balances");
 const msgDeposit = document.querySelector(".msgDeposit");
 const msgWithdraw = document.querySelector(".msgWithdraw");
-const msgTransfer= document.querySelector(".msgTransfer");
+const msgTransfer = document.querySelector(".msgTransfer");
 
 class Account {
   constructor() {
@@ -46,7 +46,7 @@ const withdraw = () => {
     const users = JSON.parse(localStorage.getItem("accountUsers"));
     users.map((user) => {
       if (user.name === userWithdraw.value) {
-        if (user.balance >= Number(amountWithdrawed.value)) {
+        if (user.balance > Number(amountWithdrawed.value)) {
           user.balance -= Number(amountWithdrawed.value);
           msgWithdraw.innerHTML = `Withdraw Successful!`;
         } else {
@@ -73,11 +73,9 @@ const transfer = (sender, receipient) => {
         storeReceipient = user;
       }
     });
-    if (storeSender.balance < Number(amountTransfer.value)) {
-      // const newClassa = msgTransfer.toggleClassList('message')
+    if (storeSender.balance <= Number(amountTransfer.value)) {
       msgTransfer.innerHTML = `Insufficient funds`;
     } else {
-      storeSender.balance -= Number(amountTransfer.value);
       storeReceipient.balance += Number(amountTransfer.value);
       msgTransfer.innerHTML = `Tranfer Successful!`;
     }
@@ -90,7 +88,7 @@ transfer(transferFrom, transferTo);
 const displayBalance = () => {
   const users = JSON.parse(localStorage.getItem("accountUsers"));
   const newDiv = document.createElement("ol");
-  balanceDiv.innerHTML = ''
+  balanceDiv.innerHTML = "";
   users.forEach((user) => {
     newDiv.innerHTML += `<li>Account Name: ${user.name}, Balance: ${user.balance}</li>`;
   });
