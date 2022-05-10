@@ -11,9 +11,9 @@
 
 **This is an documentation of js bank simulation**
 
-## Live Demo(coming soon)
+## Live Demo
 
-[See live](#)
+[Live link](https://ksigei.github.io/js_bank/)
 
 ## Getting Started
 
