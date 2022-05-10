@@ -1,7 +1,7 @@
 # Js bank
 
 > Banking simulation with js
-
+![screenshot](./screenshot/screen.jpg)
 ## Built With
 
 - HTML
