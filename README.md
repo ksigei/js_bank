@@ -42,6 +42,6 @@ npm start
 10. Use auth(eg sign up with password), to make it safe
 
 balances
-Account Name: Wanjiru, Balance: 599.5
+Account Name: Wanjiru, Balance: 563.5
 Account Name: Juma, Balance: 4670.51
 Account Name: Linda, Balance: 1292
