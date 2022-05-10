@@ -38,8 +38,7 @@ npm start
 6. Ensuring best practices, the code should not just work, it should be readable and easy to srcValue
 7. Using a front-end library, e.g react or vue to make the program run better
 8. Add the currencies so that it can be clears
-9. Allow adding of other users through the input form in the UI
-10. Use auth(eg sign up with password), to make it safe
+
 
 balances
 Account Name: Wanjiru, Balance: 563.5
